@@ -1,2 +1,2 @@
-# homebrew-kubeshark-canary
-Test tap for homebrew releases
+# homebrew-kubeshark
+Homebrew formulae of Kubeshark
