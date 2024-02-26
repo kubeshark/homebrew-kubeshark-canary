@@ -16,8 +16,8 @@ class Kubeshark < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark-canary/releases/download/v0.5.0/kubeshark_darwin_amd64"
-      sha256 "9929d2aa5b6419cca802e9cf620f5105dff8eef31de82901b3bd179e4e6d2ef9"
+      url "https://github.com/kubeshark/kubeshark/releases/download/v52.1.50/kubeshark_darwin_amd64"
+      sha256 "e9a4c0a538fd3143123753b7861634e2a6f8d182b0c842306d0a0ac097d1cb28"
 
       def install
         bin.install "kubeshark_darwin_amd64" => "kubeshark"
