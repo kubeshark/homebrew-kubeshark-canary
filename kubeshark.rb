@@ -14,7 +14,7 @@ class Kubeshark < Formula
       def install
         if File.exist?("/usr/local/bin/kubeshark")
           opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
-          system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
+          system "sudo rm", "-f", "/usr/local/bin/kubeshark"
         end
 
         bin.install "kubeshark_darwin_arm64" => "kubeshark"
@@ -27,7 +27,7 @@ class Kubeshark < Formula
       def install
         if File.exist?("/usr/local/bin/kubeshark")
           opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
-          system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
+          system "sudo rm", "-f", "/usr/local/bin/kubeshark"
         end
 
         bin.install "kubeshark_darwin_amd64" => "kubeshark"
@@ -43,7 +43,7 @@ class Kubeshark < Formula
       def install
         if File.exist?("/usr/local/bin/kubeshark")
           opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
-          system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
+          system "sudo rm", "-f", "/usr/local/bin/kubeshark"
         end
 
         bin.install "kubeshark_linux_amd64" => "kubeshark"
@@ -56,9 +56,9 @@ class Kubeshark < Formula
       def install
         if File.exist?("/usr/local/bin/kubeshark")
           opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
-          system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
+          system "sudo rm", "-f", "/usr/local/bin/kubeshark"
         end
-        
+
         bin.install "kubeshark_linux_arm64" => "kubeshark"
       end
     end
