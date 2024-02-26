@@ -6,19 +6,17 @@ class Kubeshark < Formula
   homepage "https://github.com/kubeshark/kubeshark"
   version "0.5.0"
 
-  def pre_install
-    if File.exist?("/usr/local/bin/kubeshark")
-      opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
-      system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
-    end
-  end
-
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kubeshark/kubeshark-canary/releases/download/v0.5.0/kubeshark_darwin_arm64"
       sha256 "5d30d2d7dabe8bb54acfe25e3b184cd4fe76da8271cd7257a167e38986619801"
 
       def install
+        if File.exist?("/usr/local/bin/kubeshark")
+          opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
+          system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
+        end
+
         bin.install "kubeshark_darwin_arm64" => "kubeshark"
       end
     end
@@ -27,6 +25,11 @@ class Kubeshark < Formula
       sha256 "e9a4c0a538fd3143123753b7861634e2a6f8d182b0c842306d0a0ac097d1cb28"
 
       def install
+        if File.exist?("/usr/local/bin/kubeshark")
+          opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
+          system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
+        end
+
         bin.install "kubeshark_darwin_amd64" => "kubeshark"
       end
     end
@@ -38,6 +41,11 @@ class Kubeshark < Formula
       sha256 "f1f1db7c605493532525016945d63cfb24cf7fc5105dfc70dcbea27d0dc35893"
 
       def install
+        if File.exist?("/usr/local/bin/kubeshark")
+          opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
+          system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
+        end
+
         bin.install "kubeshark_linux_amd64" => "kubeshark"
       end
     end
@@ -46,6 +54,11 @@ class Kubeshark < Formula
       sha256 "52433a13c3ae962e0add1d4ec9b93f7f21e383aea68ba328e3ae068fa2e4d441"
 
       def install
+        if File.exist?("/usr/local/bin/kubeshark")
+          opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
+          system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
+        end
+        
         bin.install "kubeshark_linux_arm64" => "kubeshark"
       end
     end
