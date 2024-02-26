@@ -6,6 +6,13 @@ class Kubeshark < Formula
   homepage "https://github.com/kubeshark/kubeshark"
   version "0.5.0"
 
+  def pre_install
+    if File.exist?("/usr/local/bin/kubeshark")
+      opoo "kubeshark binary already exists and will be removed before installation ('sudo' access is required)"
+      system "sudo" "rm", "-f", "/usr/local/bin/kubeshark"
+    end
+  end
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kubeshark/kubeshark-canary/releases/download/v0.5.0/kubeshark_darwin_arm64"
